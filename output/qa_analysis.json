@@ -1,0 +1,1101 @@
+[
+  {
+    "id": "US-01",
+    "acceptance_criteria": [
+      "System must provide ≥ 5 templates",
+      "System must have dynamic fields",
+      "System must comply with F-01"
+    ],
+    "test_scenarios": [
+      "Happy Path: Create a job posting using a customizable template",
+      "Edge Case: Attempt to create a job posting with invalid template selection",
+      "Error Scenario: Attempt to create a job posting with missing required fields",
+      "Performance Scenario: Create multiple job postings in a short period"
+    ],
+    "test_cases": [
+      {
+        "name": "Create a job posting using a customizable template - Happy Path",
+        "steps": [
+          "Login as HR Manager",
+          "Navigate to Job Posting Templates",
+          "Select a template from the available 5+ templates",
+          "Click on 'Create Job Posting'",
+          "Fill in all required fields dynamically",
+          "Review and confirm the job posting details",
+          "Click 'Save' to create the job posting"
+        ],
+        "expected_result": "Job posting is successfully created and saved with all required fields filled and template applied"
+      },
+      {
+        "name": "Attempt to create a job posting with invalid template selection - Edge Case",
+        "steps": [
+          "Login as HR Manager",
+          "Navigate to Job Posting Templates",
+          "Select an invalid or non-existent template",
+          "Click on 'Create Job Posting'",
+          "Observe error message indicating invalid template selection"
+        ],
+        "expected_result": "System displays an error message indicating that the selected template is invalid or non-existent"
+      },
+      {
+        "name": "Attempt to create a job posting with missing required fields - Error Scenario",
+        "steps": [
+          "Login as HR Manager",
+          "Navigate to Job Posting Templates",
+          "Select a template",
+          "Click on 'Create Job Posting'",
+          "Do not fill in any required fields",
+          "Click 'Save' to create the job posting"
+        ],
+        "expected_result": "System displays error messages for each missing required field"
+      },
+      {
+        "name": "Create multiple job postings in a short period - Performance Scenario",
+        "steps": [
+          "Login as HR Manager",
+          "Navigate to Job Posting Templates",
+          "Select a template",
+          "Click on 'Create Job Posting'",
+          "Fill in required fields and click 'Save' to create the first job posting",
+          "Repeat steps 3-4 to create additional job postings",
+          "Observe system performance during the creation of multiple job postings"
+        ],
+        "expected_result": "System handles the creation of multiple job postings without any performance degradation or errors"
+      }
+    ]
+  },
+  {
+    "id": "US-02",
+    "acceptance_criteria": [
+      "System must support 1-click posting on ≥ 4 channels",
+      "System must automatically post to LinkedIn, Indeed, Welcome to the Jungle, and careers website",
+      "System must comply with F-02"
+    ],
+    "test_scenarios": [
+      "Happy Path",
+      "Edge Case: Invalid Channel",
+      "Edge Case: Unauthorized User"
+    ],
+    "test_cases": [
+      {
+        "name": "Happy Path - Posting to Multiple Channels",
+        "steps": [
+          "Login to the system as a Hiring Manager",
+          "Navigate to the job listing section",
+          "Select the job listing to be posted",
+          "Click the '1-click post' button",
+          "Verify that the job listing is posted on LinkedIn",
+          "Verify that the job listing is posted on Indeed",
+          "Verify that the job listing is posted on Welcome to the Jungle",
+          "Verify that the job listing is posted on the careers website"
+        ],
+        "expected_result": "The job listing is successfully posted on all selected channels."
+      },
+      {
+        "name": "Edge Case: Invalid Channel",
+        "steps": [
+          "Login to the system as a Hiring Manager",
+          "Navigate to the job listing section",
+          "Select the job listing to be posted",
+          "Enter an invalid channel name in the '1-click post' field",
+          "Click the '1-click post' button",
+          "Observe that the system does not allow posting to the invalid channel"
+        ],
+        "expected_result": "The system displays an error message indicating that the channel name is invalid."
+      },
+      {
+        "name": "Edge Case: Unauthorized User",
+        "steps": [
+          "Login to the system as a non-Hiring Manager user",
+          "Navigate to the job listing section",
+          "Attempt to click the '1-click post' button",
+          "Observe that the system denies the action and displays an error message"
+        ],
+        "expected_result": "The system denies the action and displays an error message indicating that the user is not authorized to post job listings."
+      }
+    ]
+  },
+  {
+    "id": "US-03",
+    "acceptance_criteria": [
+      "System must generate a dedicated application URL per job posting",
+      "System must track the source of applications",
+      "System must comply with F-03"
+    ],
+    "test_scenarios": [
+      "Happy Path: Generate and track a unique application URL for a job posting",
+      "Edge Case: Generate a unique application URL with invalid job posting data",
+      "Error Case: Generate a unique application URL for a non-existent job posting",
+      "Performance: Generate and track multiple unique application URLs in a short period"
+    ],
+    "test_cases": [
+      {
+        "name": "Tests de sélection et publication sur canaux (regroupés)",
+        "steps": [
+          "Login as Recruiter",
+          "Navigate to Job Postings section",
+          "Click on 'Create Job Posting' button",
+          "Enter job posting details",
+          "Click on 'Generate URL' button"
+        ],
+        "expected_result": "Le système publie correctement sur tous les canaux sélectionnés et gère les cas limites avec des messages appropriés"
+      },
+      {
+        "name": "Test de performance - Temps de réponse",
+        "steps": [
+          "Exécuter le scénario principal",
+          "Mesurer le temps de réponse",
+          "Vérifier que le temps est acceptable"
+        ],
+        "expected_result": "Le système répond dans les délais spécifiés"
+      },
+      {
+        "name": "Test d'erreur - Données invalides",
+        "steps": [
+          "Soumettre des données invalides",
+          "Vérifier la validation",
+          "Confirmer l'affichage du message d'erreur"
+        ],
+        "expected_result": "Le système rejette les données invalides avec un message approprié"
+      }
+    ]
+  },
+  {
+    "id": "US-04",
+    "acceptance_criteria": [
+      "System must have an HR + Manager validation workflow",
+      "System must require moderation before job posting publication",
+      "System must comply with F-04"
+    ],
+    "test_scenarios": [
+      "Moderation workflow with valid job posting",
+      "Moderation workflow with invalid job posting",
+      "Moderation workflow with incomplete job posting"
+    ],
+    "test_cases": [
+      {
+        "name": "Moderate valid job posting (Happy Path)",
+        "steps": [
+          "Login as Talent Acquisition Specialist",
+          "Create a new job posting",
+          "Enter valid job posting details",
+          "Submit job posting for moderation",
+          "HR reviews and approves the job posting",
+          "Manager reviews and approves the job posting",
+          "Verify that the job posting is published"
+        ],
+        "expected_result": "Job posting is successfully published after HR and Manager approval"
+      },
+      {
+        "name": "Tests de sélection et publication sur canaux (regroupés)",
+        "steps": [
+          "Login as Talent Acquisition Specialist",
+          "Create a new job posting",
+          "Enter invalid (avec différentes variantes)",
+          "Submit job posting for moderation",
+          "HR reviews and rejects the job posting"
+        ],
+        "expected_result": "Le système publie correctement sur tous les canaux sélectionnés et gère les cas limites avec des messages appropriés"
+      },
+      {
+        "name": "Test de performance - Temps de réponse",
+        "steps": [
+          "Exécuter le scénario principal",
+          "Mesurer le temps de réponse",
+          "Vérifier que le temps est acceptable"
+        ],
+        "expected_result": "Le système répond dans les délais spécifiés"
+      }
+    ]
+  },
+  {
+    "id": "US-05",
+    "acceptance_criteria": [
+      "System must recognize ≥ 90% of standard CVs",
+      "System must support parsing of PDF, Word, and LinkedIn CVs",
+      "System must comply with F-05"
+    ],
+    "test_scenarios": [
+      "Parsing standard CVs",
+      "Parsing non-standard CVs",
+      "Parsing unsupported file formats",
+      "Parsing large number of CVs"
+    ],
+    "test_cases": [
+      {
+        "name": "Happy Path - Parsing Standard CVs",
+        "steps": [
+          "Login to the system as an IT Manager",
+          "Upload a standard CV in PDF format",
+          "Verify that the system successfully parses the CV",
+          "Check that all key information is correctly extracted",
+          "Confirm that the system recognizes the CV with ≥ 90% accuracy"
+        ],
+        "expected_result": "The system successfully parses the standard CV, extracts all key information, and recognizes the CV with ≥ 90% accuracy."
+      },
+      {
+        "name": "Edge Case - Parsing Non-Standard CVs",
+        "steps": [
+          "Login to the system as an IT Manager",
+          "Upload a non-standard CV in Word format with missing sections",
+          "Verify that the system still attempts to parse the CV",
+          "Check that the system extracts as much information as possible despite missing sections",
+          "Confirm that the system still recognizes the CV with ≥ 90% accuracy"
+        ],
+        "expected_result": "The system attempts to parse the non-standard CV, extracts as much information as possible, and still recognizes the CV with ≥ 90% accuracy."
+      },
+      {
+        "name": "Error Scenario - Parsing Unsupported File Formats",
+        "steps": [
+          "Login to the system as an IT Manager",
+          "Upload a CV in an unsupported file format (e.g., .jpeg)",
+          "Verify that the system rejects the file",
+          "Check that an appropriate error message is displayed",
+          "Confirm that the system does not attempt to parse the unsupported file"
+        ],
+        "expected_result": "The system rejects the CV in the unsupported file format, displays an appropriate error message, and does not attempt to parse the file."
+      },
+      {
+        "name": "Performance Scenario - Parsing Large Number of CVs",
+        "steps": [
+          "Login to the system as an IT Manager",
+          "Upload 100 standard CVs in PDF format",
+          "Verify that the system can process all 100 CVs within a reasonable time frame",
+          "Check that all 100 CVs are successfully parsed",
+          "Confirm that the system maintains its ≥ 90% accuracy rate"
+        ],
+        "expected_result": "The system successfully processes all 100 standard CVs within a reasonable time frame, parses all 100 CVs, and maintains its ≥ 90% accuracy rate."
+      }
+    ]
+  },
+  {
+    "id": "US-06",
+    "acceptance_criteria": [
+      "System must store candidate CV data in a structured database",
+      "System must support full-text search by skills, experience, and location",
+      "System must comply with F-06"
+    ],
+    "test_scenarios": [
+      "Happy Path: Storing a candidate CV with valid data",
+      "Edge Case: Storing a candidate CV with invalid data",
+      "Error Case: Storing a candidate CV with missing required fields",
+      "Performance Case: Storing multiple candidate CVs in a short period"
+    ],
+    "test_cases": [
+      {
+        "name": "Tests de validation des données (regroupés)",
+        "steps": [
+          "Login as GDPR Officer",
+          "Navigate to the Candidate CV Management section",
+          "Click on (avec différentes variantes)",
+          "Enter valid (avec différentes variantes)",
+          "Upload a valid CV file"
+        ],
+        "expected_result": "Le système valide correctement toutes les entrées et affiche des messages d'erreur appropriés"
+      },
+      {
+        "name": "Tests de validation des données (regroupés)",
+        "steps": [
+          "Login as GDPR Officer",
+          "Navigate to the Candidate CV Management section",
+          "Click on (avec différentes variantes)",
+          "Enter invalid (avec différentes variantes)",
+          "Upload an invalid CV file (e.g., corrupted file)"
+        ],
+        "expected_result": "Le système valide correctement toutes les entrées et affiche des messages d'erreur appropriés"
+      },
+      {
+        "name": "Test de performance - Temps de réponse",
+        "steps": [
+          "Exécuter le scénario principal",
+          "Mesurer le temps de réponse",
+          "Vérifier que le temps est acceptable"
+        ],
+        "expected_result": "Le système répond dans les délais spécifiés"
+      }
+    ]
+  },
+  {
+    "id": "US-07",
+    "acceptance_criteria": [
+      "System must use a transparent algorithm to score candidates",
+      "System must allow customizable scoring criteria",
+      "System must comply with F-07"
+    ],
+    "test_scenarios": [
+      "Happy Path: Valid Job Description and Candidate Data",
+      "Edge Case: Invalid Job Description",
+      "Edge Case: Candidate Data Missing or Invalid",
+      "Edge Case: Algorithm Compliance Failure"
+    ],
+    "test_cases": [
+      {
+        "name": "Happy Path: Valid Job Description and Candidate Data",
+        "steps": [
+          "Login as HR Business Partner",
+          "Navigate to the Candidate Scoring module",
+          "Enter a valid job description",
+          "Enter valid candidate data",
+          "Click on the 'Score' button",
+          "Verify that the system generates a score for the candidate",
+          "Check that the score is based on the provided job description",
+          "Confirm that the system uses a transparent algorithm"
+        ],
+        "expected_result": "The system generates a score for the candidate based on the provided job description, and the score is displayed transparently."
+      },
+      {
+        "name": "Tests de validation des données (regroupés)",
+        "steps": [
+          "Login as HR Business Partner",
+          "Navigate to the Candidate Scoring module",
+          "Enter an invalid job description (e.g., an empty string or non-descriptive text)",
+          "Enter valid candidate data",
+          "Click on the 'Score' button"
+        ],
+        "expected_result": "Le système valide correctement toutes les entrées et affiche des messages d'erreur appropriés"
+      },
+      {
+        "name": "Edge Case: Algorithm Compliance Failure",
+        "steps": [
+          "Login as HR Business Partner",
+          "Navigate to the Candidate Scoring module",
+          "Enter a valid job description",
+          "Enter valid candidate data",
+          "Click on the 'Score' button",
+          "Verify that the system generates a score for the candidate",
+          "Check that the score is within the expected range",
+          "Confirm that the system complies with F-07"
+        ],
+        "expected_result": "The system generates a score for the candidate, and the score is within the expected range, ensuring compliance with F-07."
+      }
+    ]
+  },
+  {
+    "id": "US-08",
+    "acceptance_criteria": [
+      "System must alert if email or first+last name is identical",
+      "System must detect applications from the same candidate for different positions",
+      "System must comply with F-08"
+    ],
+    "test_scenarios": [
+      "Detect duplicate by email",
+      "Detect duplicate by first+last name",
+      "Detect duplicate across different positions",
+      "Handle edge cases"
+    ],
+    "test_cases": [
+      {
+        "name": "Tests data-driven des emails avec variables dynamiques",
+        "steps": [
+          "Login as Talent Manager",
+          "Navigate to Candidate Applications",
+          "Enter a (avec différentes variantes)",
+          "Click 'Submit'",
+          "Verify system alerts for duplicate email"
+        ],
+        "expected_result": "Tous les emails sont générés correctement avec les bonnes variables dynamiques et délais"
+      },
+      {
+        "name": "Edge Case - Invalid input",
+        "steps": [
+          "Login as Talent Manager",
+          "Navigate to Candidate Applications",
+          "Enter a candidate application with an invalid email (e.g., missing '@')",
+          "Click 'Submit'",
+          "Verify system does not process the application and displays an error message"
+        ],
+        "expected_result": "System rejects the application and displays an error message for invalid input"
+      },
+      {
+        "name": "Test de performance - Temps de réponse",
+        "steps": [
+          "Exécuter le scénario principal",
+          "Mesurer le temps de réponse",
+          "Vérifier que le temps est acceptable"
+        ],
+        "expected_result": "Le système répond dans les délais spécifiés"
+      }
+    ]
+  },
+  {
+    "id": "US-09",
+    "acceptance_criteria": [
+      "System must log all configuration changes made by the coordinator (F-07)",
+      "System must notify the coordinator when the environment is ready for UAT (F-08)",
+      "System must track the status of tested flows during UAT (F-09)"
+    ],
+    "test_scenarios": [
+      "Configure environment and verify logging of changes",
+      "Receive notification when environment is ready for UAT",
+      "Track status of tested flows during UAT"
+    ],
+    "test_cases": [
+      {
+        "name": "Happy Path - Configuration Change Logging",
+        "steps": [
+          "Login as Recruitment Coordinator",
+          "Make a configuration change",
+          "Verify the change is logged in the system"
+        ],
+        "expected_result": "The system logs the configuration change made by the coordinator"
+      },
+      {
+        "name": "Edge Case - Invalid Configuration Change",
+        "steps": [
+          "Login as Recruitment Coordinator",
+          "Attempt to make an invalid configuration change",
+          "Verify the system does not log the invalid change"
+        ],
+        "expected_result": "The system does not log invalid configuration changes"
+      },
+      {
+        "name": "Happy Path - Notification for UAT Readiness",
+        "steps": [
+          "Login as Recruitment Coordinator",
+          "Complete the setup process",
+          "Verify the system sends a notification when the environment is ready for UAT"
+        ],
+        "expected_result": "The system sends a notification to the coordinator when the environment is ready for UAT"
+      },
+      {
+        "name": "Edge Case - Notification for UAT Readiness with Unmet Conditions",
+        "steps": [
+          "Login as Recruitment Coordinator",
+          "Attempt to send a notification before the environment is fully ready",
+          "Verify the system does not send a notification"
+        ],
+        "expected_result": "The system does not send a notification until all conditions for UAT readiness are met"
+      }
+    ]
+  },
+  {
+    "id": "US-10",
+    "acceptance_criteria": [
+      "System must provide training sessions for candidates (F-10)",
+      "System must document the training sessions attended by candidates (F-11)",
+      "System must ensure candidates have access to user guides (F-12)"
+    ],
+    "test_scenarios": [
+      "Candidate accesses training sessions",
+      "Candidate documents training sessions",
+      "Candidate accesses user guides"
+    ],
+    "test_cases": [
+      {
+        "name": "Tests de sécurité et contrôle d'accès (regroupés)",
+        "steps": [
+          "Login to the ATS system as a candidate",
+          "Navigate to the 'Training Sessions' section",
+          "Click on a training session",
+          "Verify that the training session details are displayed",
+          "Try to access a training session that is not available"
+        ],
+        "expected_result": "Le système contrôle correctement les accès et journalise toutes les tentatives"
+      },
+      {
+        "name": "Candidate documents training sessions - Edge Case",
+        "steps": [
+          "Login to the ATS system as a candidate",
+          "Navigate to the 'Training Sessions' section",
+          "Attempt to document a training session without completing it",
+          "Verify that an error message is displayed indicating the session must be completed first"
+        ],
+        "expected_result": "Candidate sees an error message indicating the training session must be completed before it can be documented."
+      },
+      {
+        "name": "Candidate accesses user guides - Edge Case",
+        "steps": [
+          "Login to the ATS system as a candidate",
+          "Navigate to the 'User Guides' section",
+          "Try to access a user guide that is not available",
+          "Verify that an error message is displayed indicating the guide is not available"
+        ],
+        "expected_result": "Candidate sees an error message indicating the user guide is not available."
+      }
+    ]
+  },
+  {
+    "id": "US-11",
+    "acceptance_criteria": [
+      "System must track the estimated budget for the project (F-13)",
+      "System must log all expenses against the budget (F-14)",
+      "System must generate budget variance reports (F-15)"
+    ],
+    "test_scenarios": [
+      "Budget Tracking",
+      "Expense Logging",
+      "Budget Variance Reporting"
+    ],
+    "test_cases": [
+      {
+        "name": "Track Estimated Budget - Happy Path",
+        "steps": [
+          "Login as HR Manager",
+          "Navigate to Project Budget Tracking section",
+          "Enter estimated budget amount",
+          "Save the estimated budget"
+        ],
+        "expected_result": "Estimated budget is successfully saved and displayed in the system"
+      },
+      {
+        "name": "Tests de validation des données (regroupés)",
+        "steps": [
+          "Login as HR Manager",
+          "Navigate to Project Budget Tracking section",
+          "Enter an invalid budget amount (e.g., negative value)",
+          "Attempt to save the estimated budget",
+          "Navigate to Project Expenses section"
+        ],
+        "expected_result": "Le système valide correctement toutes les entrées et affiche des messages d'erreur appropriés"
+      },
+      {
+        "name": "Generate Budget Variance Report - Edge Case",
+        "steps": [
+          "Login as HR Manager",
+          "Navigate to Budget Variance Reports section",
+          "Select a non-existent project",
+          "Attempt to generate the budget variance report"
+        ],
+        "expected_result": "System displays an error message indicating the non-existent project"
+      },
+      {
+        "name": "Log Expenses - Happy Path",
+        "steps": [
+          "Login as HR Manager",
+          "Navigate to Project Expenses section",
+          "Enter expense details (amount, category, date)",
+          "Save the expense"
+        ],
+        "expected_result": "Expense is successfully logged and displayed in the system"
+      }
+    ]
+  },
+  {
+    "id": "US-12",
+    "acceptance_criteria": [
+      "System must generate signed acceptance reports for the project (F-16)",
+      "System must notify the hiring manager when the reports are ready (F-17)",
+      "System must archive the signed reports for future reference (F-18)"
+    ],
+    "test_scenarios": [
+      "Happy Path - Hiring Manager receives signed acceptance reports",
+      "Edge Case - Hiring Manager receives reports with invalid signature",
+      "Error Scenario - Hiring Manager does not receive any reports"
+    ],
+    "test_cases": [
+      {
+        "name": "Tests de performance (regroupés)",
+        "steps": [
+          "Login as Hiring Manager",
+          "Navigate to Project Management section",
+          "Select project F-16",
+          "Click on Generate Reports",
+          "Verify signed (avec différentes variantes)"
+        ],
+        "expected_result": "Le système répond dans les délais acceptables pour l'ensemble des opérations"
+      },
+      {
+        "name": "Notify Hiring Manager when reports are ready",
+        "steps": [
+          "Login as Hiring Manager",
+          "Navigate to Project Management section",
+          "Select project F-16",
+          "Click on Generate Reports",
+          "Observe system notification",
+          "Verify notification indicates reports are ready"
+        ],
+        "expected_result": "System sends a notification to the Hiring Manager indicating that the reports are ready"
+      },
+      {
+        "name": "Invalid signature in reports",
+        "steps": [
+          "Login as Hiring Manager",
+          "Navigate to Project Management section",
+          "Select project F-16",
+          "Click on Generate Reports",
+          "Verify system generates reports with invalid signature",
+          "Check if system notifies Hiring Manager about invalid signature"
+        ],
+        "expected_result": "System generates reports with invalid signature and notifies Hiring Manager about the issue"
+      },
+      {
+        "name": "No reports generated",
+        "steps": [
+          "Login as Hiring Manager",
+          "Navigate to Project Management section",
+          "Select project F-16",
+          "Click on Generate Reports",
+          "Verify no reports are generated",
+          "Check if system notifies Hiring Manager about the issue"
+        ],
+        "expected_result": "System does not generate any reports and notifies Hiring Manager about the issue"
+      }
+    ]
+  },
+  {
+    "id": "US-13",
+    "acceptance_criteria": [
+      "≥ 5 configurable steps (e.g., CV → Phone Screen → Tech Interview → Manager Interview → Offer)",
+      "System must comply with F-10",
+      "System must allow for real-time updates"
+    ],
+    "test_scenarios": [
+      "Configure recruitment process for a software developer role",
+      "Ensure real-time updates are applied",
+      "Verify system compliance with F-10",
+      "Test edge case with fewer than 5 steps"
+    ],
+    "test_cases": [
+      {
+        "name": "Configure recruitment process for a software developer role",
+        "steps": [
+          "Log in as Recruiter",
+          "Navigate to Job Type Settings",
+          "Click on 'Add Step'",
+          "Enter 'CV Review' as step name",
+          "Click 'Save'",
+          "Repeat for 'Phone Screen', 'Tech Interview', 'Manager Interview', and 'Offer'",
+          "Verify steps are added in correct order",
+          "Click on 'Save' to confirm changes"
+        ],
+        "expected_result": "5 steps are successfully added and displayed in the correct order"
+      },
+      {
+        "name": "Ensure real-time updates are applied",
+        "steps": [
+          "Log in as Recruiter",
+          "Navigate to Job Type Settings",
+          "Add a new step named 'Initial Assessment'",
+          "Verify the new step is immediately visible in the list",
+          "Update the step name to 'Technical Assessment'",
+          "Verify the step name is updated in real-time"
+        ],
+        "expected_result": "New step is added and updated in real-time"
+      },
+      {
+        "name": "Verify system compliance with F-10",
+        "steps": [
+          "Log in as Recruiter",
+          "Navigate to Compliance Settings",
+          "Select 'F-10' compliance level",
+          "Click 'Apply'",
+          "Verify all steps are compliant with F-10",
+          "Check for any warnings or errors"
+        ],
+        "expected_result": "All steps are compliant with F-10 and no warnings or errors are displayed"
+      },
+      {
+        "name": "Test edge case with fewer than 5 steps",
+        "steps": [
+          "Log in as Recruiter",
+          "Navigate to Job Type Settings",
+          "Add only 4 steps: 'CV Review', 'Phone Screen', 'Tech Interview', and 'Manager Interview'",
+          "Verify the system allows fewer than 5 steps",
+          "Try to add a 5th step and verify the system prevents it"
+        ],
+        "expected_result": "System allows only 4 steps and prevents adding a 5th step"
+      }
+    ]
+  },
+  {
+    "id": "US-14",
+    "acceptance_criteria": [
+      "Complete history, non-modifiable",
+      "System must comply with F-12",
+      "System must ensure comments are non-editable"
+    ],
+    "test_scenarios": [
+      "Happy Path: Adding and viewing comments and evaluations",
+      "Edge Case: Attempting to edit non-editable comments",
+      "Error Scenario: Attempting to add comments without login",
+      "Performance Scenario: Adding and viewing comments under high load"
+    ],
+    "test_cases": [
+      {
+        "name": "Happy Path: Adding and viewing comments and evaluations",
+        "steps": [
+          "Login as Talent Acquisition Specialist",
+          "Navigate to candidate profile",
+          "Click on 'Add Comment' button",
+          "Enter a comment and select the step",
+          "Click 'Save' button",
+          "Verify that the comment is added to the history",
+          "Click on the comment to view it",
+          "Verify that the comment is displayed correctly"
+        ],
+        "expected_result": "Comment is successfully added and displayed in the history, non-editable"
+      },
+      {
+        "name": "Edge Case: Attempting to edit non-editable comments",
+        "steps": [
+          "Login as Talent Acquisition Specialist",
+          "Navigate to candidate profile",
+          "Click on a comment in the history",
+          "Attempt to edit the comment",
+          "Verify that the comment cannot be edited"
+        ],
+        "expected_result": "Attempt to edit the comment fails and the comment remains non-editable"
+      },
+      {
+        "name": "Error Scenario: Attempting to add comments without login",
+        "steps": [
+          "Navigate to candidate profile",
+          "Click on 'Add Comment' button",
+          "Enter a comment and select the step",
+          "Click 'Save' button",
+          "Verify that the system redirects to the login page"
+        ],
+        "expected_result": "System redirects to the login page when attempting to add comments without login"
+      },
+      {
+        "name": "Performance Scenario: Adding and viewing comments under high load",
+        "steps": [
+          "Simulate high load by multiple users adding and viewing comments simultaneously",
+          "Login as Talent Acquisition Specialist",
+          "Navigate to candidate profile",
+          "Click on 'Add Comment' button",
+          "Enter a comment and select the step",
+          "Click 'Save' button",
+          "Verify that the comment is added to the history",
+          "Click on the comment to view it",
+          "Verify that the comment is displayed correctly"
+        ],
+        "expected_result": "System handles high load without crashing and comments are added and viewed correctly"
+      }
+    ]
+  },
+  {
+    "id": "US-15",
+    "acceptance_criteria": [
+      "The system must support dynamic variables such as first name, position, and delay in emails.",
+      "The system must comply with F-14 standards.",
+      "The system must allow for dynamic content insertion.",
+      "The system must be able to send emails at specified intervals."
+    ],
+    "test_scenarios": [
+      "Customize email with dynamic variables",
+      "Compliance with F-14 standards",
+      "Dynamic content insertion",
+      "Email sending at specified intervals"
+    ],
+    "test_cases": [
+      {
+        "name": "Happy Path - Customize email with dynamic variables",
+        "steps": [
+          "Login to the system as an IT Manager",
+          "Navigate to the email customization section",
+          "Enter the first name variable and save",
+          "Enter the position variable and save",
+          "Enter the delay variable and save",
+          "Verify that the dynamic variables are saved correctly"
+        ],
+        "expected_result": "The system displays the saved dynamic variables."
+      },
+      {
+        "name": "Edge Case - Dynamic content insertion",
+        "steps": [
+          "Login to the system as an IT Manager",
+          "Navigate to the email customization section",
+          "Insert a dynamic content placeholder (e.g., {{content}}) and save",
+          "Verify that the system allows for dynamic content insertion",
+          "Check that the placeholder is correctly saved"
+        ],
+        "expected_result": "The system allows for dynamic content insertion and saves the placeholder correctly."
+      },
+      {
+        "name": "Tests data-driven des emails avec variables dynamiques",
+        "steps": [
+          "Login to the system as an IT Manager",
+          "Navigate to (avec différentes variantes)",
+          "Enter the (avec différentes variantes)",
+          "Enter an invalid delay variable (e.g., 'abc') and save",
+          "Verify that the system displays an error message"
+        ],
+        "expected_result": "Tous les emails sont générés correctement avec les bonnes variables dynamiques et délais"
+      },
+      {
+        "name": "Happy Path - Compliance with F-14 standards",
+        "steps": [
+          "Login to the system as an IT Manager",
+          "Navigate to the email settings section",
+          "Verify that the system settings comply with F-14 standards",
+          "Check the email content for compliance with F-14 standards"
+        ],
+        "expected_result": "The system settings and email content comply with F-14 standards."
+      }
+    ]
+  },
+  {
+    "id": "US-16",
+    "acceptance_criteria": [
+      "Per-user configuration",
+      "System must comply with F-17",
+      "System must allow for customizable notification settings"
+    ],
+    "test_scenarios": [
+      "Configure push notifications for a user",
+      "Configure email notifications for a user",
+      "Configure both push and email notifications for a user",
+      "Configure and test edge cases for notification settings"
+    ],
+    "test_cases": [
+      {
+        "name": "Tests data-driven des emails avec variables dynamiques",
+        "steps": [
+          "Login as a GDPR Officer",
+          "Navigate to the notification settings page",
+          "Click on (avec différentes variantes)",
+          "Select the (avec différentes variantes)",
+          "Save the configuration"
+        ],
+        "expected_result": "Tous les emails sont générés correctement avec les bonnes variables dynamiques et délais"
+      },
+      {
+        "name": "Configure and test edge cases for notification settings",
+        "steps": [
+          "Login as a GDPR Officer",
+          "Navigate to the notification settings page",
+          "Click on the push notifications tab",
+          "Select an invalid event (non-existent event)",
+          "Save the configuration",
+          "Verify that the system displays an error message",
+          "Click on the email notifications tab",
+          "Enter invalid email addresses (e.g., missing @ symbol)",
+          "Select an invalid event (non-existent event)",
+          "Save the configuration",
+          "Verify that the system displays an error message"
+        ],
+        "expected_result": "The system should display appropriate error messages for invalid events and email addresses."
+      },
+      {
+        "name": "Test de performance - Temps de réponse",
+        "steps": [
+          "Exécuter le scénario principal",
+          "Mesurer le temps de réponse",
+          "Vérifier que le temps est acceptable"
+        ],
+        "expected_result": "Le système répond dans les délais spécifiés"
+      }
+    ]
+  },
+  {
+    "id": "US-17",
+    "acceptance_criteria": [
+      "Bi-directional sync, timezone management",
+      "System must comply with F-15",
+      "System must allow for calendar integration"
+    ],
+    "test_scenarios": [
+      "Bi-directional sync and timezone management",
+      "Calendar integration compliance",
+      "User authentication and authorization",
+      "Edge cases for calendar integration"
+    ],
+    "test_cases": [
+      {
+        "name": "Happy Path - Bi-directional Sync and Timezone Management",
+        "steps": [
+          "Login as HR Business Partner",
+          "Create a new interview event in the integrated calendar",
+          "Verify the event is created in both the HR system and the calendar",
+          "Change the timezone of the HR system",
+          "Verify the event time is updated in the calendar",
+          "Change the event time in the calendar",
+          "Verify the event time is updated in the HR system"
+        ],
+        "expected_result": "The event is created and updated bi-directionally between the HR system and the calendar, and the timezone is managed correctly."
+      },
+      {
+        "name": "Happy Path - Calendar Integration Compliance",
+        "steps": [
+          "Login as HR Business Partner",
+          "Create a new interview event in the HR system",
+          "Verify the event is created in the integrated calendar",
+          "Check if the event complies with F-15 standards",
+          "Update the event in the HR system",
+          "Verify the update is reflected in the calendar",
+          "Delete the event in the HR system",
+          "Verify the event is deleted from the calendar"
+        ],
+        "expected_result": "The event is created, updated, and deleted in compliance with F-15 standards."
+      },
+      {
+        "name": "Edge Case - User Authentication and Authorization",
+        "steps": [
+          "Login as an unauthorized user",
+          "Attempt to create a new interview event in the integrated calendar",
+          "Verify the system denies access",
+          "Login as HR Business Partner",
+          "Create a new interview event in the integrated calendar",
+          "Verify the event is created in the HR system",
+          "Login as a different HR Business Partner with different permissions",
+          "Attempt to create a new interview event in the integrated calendar",
+          "Verify the system allows access only to authorized users"
+        ],
+        "expected_result": "Unauthorized users are denied access, and only authorized users can create, update, and delete events."
+      },
+      {
+        "name": "Edge Case - Invalid Calendar Data",
+        "steps": [
+          "Login as HR Business Partner",
+          "Attempt to create an interview event with invalid data (e.g., missing date, incorrect format)",
+          "Verify the system rejects the event",
+          "Attempt to create an interview event with a date in the past",
+          "Verify the system rejects the event",
+          "Attempt to create an interview event with a date that is too far in the future",
+          "Verify the system rejects the event"
+        ],
+        "expected_result": "The system rejects events with invalid or inappropriate data."
+      }
+    ]
+  },
+  {
+    "id": "US-18",
+    "acceptance_criteria": [
+      "System must allow for at least 5 steps to be configured per job type (F-10)",
+      "Steps must include options for CV review, phone screen, technical interview, manager interview, and offer (F-10)",
+      "Configured steps must be saved and applied consistently across all job postings (F-10)"
+    ],
+    "test_scenarios": [
+      "Configure job-specific recruitment steps",
+      "Ensure minimum 5 steps are allowed per job type",
+      "Verify saved and applied steps consistency"
+    ],
+    "test_cases": [
+      {
+        "name": "Tests regroupés (Happy Path + Edge Cases)",
+        "steps": [
+          "Login as Talent Manager",
+          "Navigate to Job Configuration",
+          "Select job type",
+          "Click 'Add Step'",
+          "Enter step name 'CV Review'"
+        ],
+        "expected_result": "Tous les cas de test regroupés couvrent les scénarios Happy Path et Edge Cases avec succès"
+      },
+      {
+        "name": "Verify saved and applied steps consistency",
+        "steps": [
+          "Login as Talent Manager",
+          "Navigate to Job Configuration",
+          "Select job type",
+          "Verify all 5 steps are listed",
+          "Click 'Edit'",
+          "Verify step 'CV Review' is selected",
+          "Click 'Save'",
+          "Navigate to another job type",
+          "Verify step 'CV Review' is not selected",
+          "Click 'Edit'",
+          "Verify step 'CV Review' is not selected",
+          "Click 'Save'",
+          "Navigate back to original job type",
+          "Verify step 'CV Review' is selected"
+        ],
+        "expected_result": "Configured steps are saved and applied consistently across all job postings"
+      },
+      {
+        "name": "Test de performance - Temps de réponse",
+        "steps": [
+          "Exécuter le scénario principal",
+          "Mesurer le temps de réponse",
+          "Vérifier que le temps est acceptable"
+        ],
+        "expected_result": "Le système répond dans les délais spécifiés"
+      }
+    ]
+  },
+  {
+    "id": "US-19",
+    "acceptance_criteria": [
+      "System must use AES-256 encryption for all candidate attachments (F-09)",
+      "Access to candidate attachments must be restricted to authorized personnel only (F-09)",
+      "Encryption and access controls must be enforced at all times (F-09)"
+    ],
+    "test_scenarios": [
+      "Encryption of candidate attachments",
+      "Access control for candidate attachments",
+      "Edge cases for encryption and access control"
+    ],
+    "test_cases": [
+      {
+        "name": "Happy Path: Encryption of candidate attachments",
+        "steps": [
+          "Login as Recruitment Coordinator",
+          "Upload a candidate attachment",
+          "Verify that the system prompts for encryption",
+          "Select AES-256 encryption",
+          "Submit the attachment",
+          "Check the database to confirm AES-256 encryption is applied"
+        ],
+        "expected_result": "Candidate attachment is encrypted using AES-256 and stored in the database"
+      },
+      {
+        "name": "Edge Case: Upload an attachment without encryption",
+        "steps": [
+          "Login as Recruitment Coordinator",
+          "Upload a candidate attachment",
+          "Verify that the system prompts for encryption",
+          "Do not select any encryption",
+          "Submit the attachment",
+          "Check the database to confirm the attachment is not encrypted"
+        ],
+        "expected_result": "System should prevent submission of unencrypted attachments and display an error message"
+      },
+      {
+        "name": "Edge Case: Unauthorized access to candidate attachments",
+        "steps": [
+          "Login as a non-authorized user",
+          "Navigate to the candidate attachments section",
+          "Verify that the system denies access",
+          "Attempt to download a candidate attachment",
+          "Check the system logs to confirm access was denied"
+        ],
+        "expected_result": "System should deny access to candidate attachments and display an error message"
+      }
+    ]
+  },
+  {
+    "id": "US-20",
+    "acceptance_criteria": [
+      "System must provide an intuitive interface for moving candidates between steps (F-11)",
+      "Candidate movement must be reflected in real-time across all relevant screens (F-11)",
+      "Real-time updates must be visible to all team members with access to the candidate's profile (F-11)"
+    ],
+    "test_scenarios": [
+      "Happy Path: Moving a candidate between recruitment steps using the drag-and-drop interface",
+      "Edge Case: Attempting to move a candidate to a non-existent step",
+      "Error Case: Attempting to move a candidate with insufficient permissions"
+    ],
+    "test_cases": [
+      {
+        "name": "Tests regroupés (Happy Path + Edge Cases)",
+        "steps": [
+          "Login as (avec différentes variantes)",
+          "Navigate to the candidate's profile",
+          "Locate the candidate in the list of candidates",
+          "Click and (avec différentes variantes)",
+          "Drag the candidate to the desired recruitment step"
+        ],
+        "expected_result": "Tous les cas de test regroupés couvrent les scénarios Happy Path et Edge Cases avec succès"
+      },
+      {
+        "name": "Test de performance - Temps de réponse",
+        "steps": [
+          "Exécuter le scénario principal",
+          "Mesurer le temps de réponse",
+          "Vérifier que le temps est acceptable"
+        ],
+        "expected_result": "Le système répond dans les délais spécifiés"
+      },
+      {
+        "name": "Test d'erreur - Données invalides",
+        "steps": [
+          "Soumettre des données invalides",
+          "Vérifier la validation",
+          "Confirmer l'affichage du message d'erreur"
+        ],
+        "expected_result": "Le système rejette les données invalides avec un message approprié"
+      }
+    ]
+  }
+]

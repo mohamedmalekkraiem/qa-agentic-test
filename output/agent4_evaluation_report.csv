@@ -1,0 +1,2 @@
+Scripts_Generated,Total_Test_Functions,Script_Coverage_%,Syntax_Validity_%,Function_Coverage_%,Traceability_%,Playwright_API_Usage_%,Assertion_Density_avg,Assertion_Density_score_%,Test_Independence_%,BERTScore_%,Overall_Score,Verdict,Duration_sec
+20,64,100.0,100.0,3.1,100.0,68.8,0.7,75.0,100.0,74.3,77.7,⚠️ Agent fonctionnel mais améliorable,8.67

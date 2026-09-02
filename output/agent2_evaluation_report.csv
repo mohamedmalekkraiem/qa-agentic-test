@@ -1,0 +1,2 @@
+total_us,total_tickets,coverage_%,completeness_%,traceability_%,epic_granularity_%,epics_count,features_count,priority_high,priority_medium,priority_low,epic_coherence_%,priority_consistency_%,duplicate_score_%,overall_score,status
+20,20,100.0,100.0,100.0,100.0,5,18,4,16,0,88.1,60.0,100.0,89.0,✅ Agent performant et fiable

@@ -1,0 +1,458 @@
+[
+  {
+    "us_id": "US-01",
+    "test_case": "Happy Path - Hiring Process",
+    "script": "`output/scripts/test_us_01.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-01",
+    "test_case": "Edge Case - Invalid Candidate Data",
+    "script": "`output/scripts/test_us_01.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-01",
+    "test_case": "Happy Path - Staff Capability Tracking",
+    "script": "`output/scripts/test_us_01.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-01",
+    "test_case": "Edge Case - Attempt to Update Non-Existent Employee",
+    "script": "`output/scripts/test_us_01.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-02",
+    "test_case": "Verify Integrity, Objectivity and Independence",
+    "script": "`output/scripts/test_us_02.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-02",
+    "test_case": "Avoid Actions Contrary to Tax Laws",
+    "script": "`output/scripts/test_us_02.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-02",
+    "test_case": "Client Service Capacity Check",
+    "script": "`output/scripts/test_us_02.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-02",
+    "test_case": "Edge Case: Invalid Data Entry",
+    "script": "`output/scripts/test_us_02.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-03",
+    "test_case": "Happy Path - Display Charter of Charges and Working Hours",
+    "script": "`output/scripts/test_us_03.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-03",
+    "test_case": "Tests de validation des données (regroupés)",
+    "script": "`output/scripts/test_us_03.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-03",
+    "test_case": "Happy Path - Compliance with Professional Code of Conduct",
+    "script": "`output/scripts/test_us_03.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-04",
+    "test_case": "Happy Path - Secure Document Storage",
+    "script": "`output/scripts/test_us_04.py`",
+    "assertions": "16"
+  },
+  {
+    "us_id": "US-04",
+    "test_case": "Edge Case - Upload Invalid Document Type",
+    "script": "`output/scripts/test_us_04.py`",
+    "assertions": "16"
+  },
+  {
+    "us_id": "US-04",
+    "test_case": "Happy Path - Compliance with Data Protection Regulations",
+    "script": "`output/scripts/test_us_04.py`",
+    "assertions": "16"
+  },
+  {
+    "us_id": "US-04",
+    "test_case": "Edge Case - User Attempting to Access Restricted Document",
+    "script": "`output/scripts/test_us_04.py`",
+    "assertions": "16"
+  },
+  {
+    "us_id": "US-05",
+    "test_case": "Tests regroupés (Happy Path + Edge Cases)",
+    "script": "`output/scripts/test_us_05.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-05",
+    "test_case": "Ensure Signed and Sealed Documents are Only Provided to Authorized Clients - Edge Case: Unauthorized Client Attempts Access",
+    "script": "`output/scripts/test_us_05.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-05",
+    "test_case": "Test de performance - Temps de réponse",
+    "script": "`output/scripts/test_us_05.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-06",
+    "test_case": "Happy Path - Tracking Competency Availability",
+    "script": "`output/scripts/test_us_06.py`",
+    "assertions": "16"
+  },
+  {
+    "us_id": "US-06",
+    "test_case": "Edge Case - Invalid Date Range",
+    "script": "`output/scripts/test_us_06.py`",
+    "assertions": "16"
+  },
+  {
+    "us_id": "US-06",
+    "test_case": "Edge Case - No Irregularities Detected",
+    "script": "`output/scripts/test_us_06.py`",
+    "assertions": "16"
+  },
+  {
+    "us_id": "US-06",
+    "test_case": "Happy Path - Generating Alerts for Irregular Work Schedules",
+    "script": "`output/scripts/test_us_06.py`",
+    "assertions": "16"
+  },
+  {
+    "us_id": "US-07",
+    "test_case": "Corporate Counsel logs into the system",
+    "script": "`output/scripts/test_us_07.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-07",
+    "test_case": "Verify agent participation in mandatory training programs",
+    "script": "`output/scripts/test_us_07.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-07",
+    "test_case": "Generate compliance reports on training obligations",
+    "script": "`output/scripts/test_us_07.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-07",
+    "test_case": "Record and verify attendance at training sessions (Edge Case: Invalid login credentials)",
+    "script": "`output/scripts/test_us_07.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-08",
+    "test_case": "Tests de validation des données (regroupés)",
+    "script": "`output/scripts/test_us_08.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-08",
+    "test_case": "Test de performance - Temps de réponse",
+    "script": "`output/scripts/test_us_08.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-08",
+    "test_case": "Test d'erreur - Données invalides",
+    "script": "`output/scripts/test_us_08.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-09",
+    "test_case": "Happy Path - Logging of Sensitive Information",
+    "script": "`output/scripts/test_us_09.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-09",
+    "test_case": "Edge Case - Unauthorized Access Attempt",
+    "script": "`output/scripts/test_us_09.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-09",
+    "test_case": "Happy Path - Regular Review of Logs",
+    "script": "`output/scripts/test_us_09.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-09",
+    "test_case": "Edge Case - Review of Logs by Unauthorized User",
+    "script": "`output/scripts/test_us_09.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-10",
+    "test_case": "Tests de validation des données (regroupés)",
+    "script": "`output/scripts/test_us_10.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-10",
+    "test_case": "Sign Declaration of Compliance - User Not Authorized",
+    "script": "`output/scripts/test_us_10.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-10",
+    "test_case": "Test de performance - Temps de réponse",
+    "script": "`output/scripts/test_us_10.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-11",
+    "test_case": "Tests regroupés (Happy Path + Edge Cases)",
+    "script": "`output/scripts/test_us_11.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-11",
+    "test_case": "Tests regroupés (Happy Path + Edge Cases)",
+    "script": "`output/scripts/test_us_11.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-11",
+    "test_case": "Test de performance - Temps de réponse",
+    "script": "`output/scripts/test_us_11.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-12",
+    "test_case": "Tests de validation des données (regroupés)",
+    "script": "`output/scripts/test_us_12.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-12",
+    "test_case": "Tests de validation des données (regroupés)",
+    "script": "`output/scripts/test_us_12.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-12",
+    "test_case": "Test de performance - Temps de réponse",
+    "script": "`output/scripts/test_us_12.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-13",
+    "test_case": "Auditor successfully logs into the system (Happy Path)",
+    "script": "`output/scripts/test_us_13.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-13",
+    "test_case": "Unauthorised user attempts to access confidential information (Edge Case)",
+    "script": "`output/scripts/test_us_13.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-13",
+    "test_case": "Logging of authorised personnel's access (Happy Path)",
+    "script": "`output/scripts/test_us_13.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-13",
+    "test_case": "Training confirmation (Happy Path)",
+    "script": "`output/scripts/test_us_13.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-14",
+    "test_case": "Apply Penalty for Unauthorized Exercise of Activity - Happy Path",
+    "script": "`output/scripts/test_us_14.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-14",
+    "test_case": "Detect Infraction Without Proper Documentation - Edge Case",
+    "script": "`output/scripts/test_us_14.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-14",
+    "test_case": "System Response to Invalid Input During Penalty Application - Error Handling",
+    "script": "`output/scripts/test_us_14.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-15",
+    "test_case": "Happy Path - Input valid bureau income data",
+    "script": "`output/scripts/test_us_15.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-15",
+    "test_case": "Edge Case - Input invalid bureau income data",
+    "script": "`output/scripts/test_us_15.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-15",
+    "test_case": "Tests de validation des données (regroupés)",
+    "script": "`output/scripts/test_us_15.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-15",
+    "test_case": "Edge Case - Verify non-compliant bureau is not eligible for tax deductions",
+    "script": "`output/scripts/test_us_15.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-16",
+    "test_case": "Happy Path - Inform Competent Tax Control Bureau",
+    "script": "`output/scripts/test_us_16.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-16",
+    "test_case": "Edge Case - Sending Notifications Outside 7-Day Window",
+    "script": "`output/scripts/test_us_16.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-16",
+    "test_case": "Happy Path - Logging and Documenting Changes Without Notifications",
+    "script": "`output/scripts/test_us_16.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-17",
+    "test_case": "Happy Path - Staff Attendance Tracking",
+    "script": "`output/scripts/test_us_17.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-17",
+    "test_case": "Edge Case - Invalid Staff Member ID",
+    "script": "`output/scripts/test_us_17.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-17",
+    "test_case": "Edge Case - No Deviation Detected",
+    "script": "`output/scripts/test_us_17.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-17",
+    "test_case": "Happy Path - Notification for Deviation in Work Hours",
+    "script": "`output/scripts/test_us_17.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-18",
+    "test_case": "Happy Path - Monitoring Client Adherence",
+    "script": "`output/scripts/test_us_18.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-18",
+    "test_case": "Edge Case - Client Violates Internal Regulations",
+    "script": "`output/scripts/test_us_18.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-18",
+    "test_case": "Error Handling - Invalid Client Data",
+    "script": "`output/scripts/test_us_18.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-19",
+    "test_case": "Calculate reasonable fee for a standard service",
+    "script": "`output/scripts/test_us_19.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-19",
+    "test_case": "Calculate fee with invalid input data",
+    "script": "`output/scripts/test_us_19.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-19",
+    "test_case": "Review fee calculation by designated authority",
+    "script": "`output/scripts/test_us_19.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-20",
+    "test_case": "Tests de validation des données (regroupés)",
+    "script": "`output/scripts/test_us_20.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-20",
+    "test_case": "Edge Case: Invalid Request from Tax Control Agents",
+    "script": "`output/scripts/test_us_20.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-20",
+    "test_case": "Edge Case: No Assistance Provided and Log Interaction",
+    "script": "`output/scripts/test_us_20.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-21",
+    "test_case": "Inform Competent Tax Control Bureau - Happy Path",
+    "script": "`output/scripts/test_us_21.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-21",
+    "test_case": "Inform Competent Tax Control Bureau - Edge Case: Invalid Data",
+    "script": "`output/scripts/test_us_21.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-21",
+    "test_case": "Inform Competent Tax Control Bureau - Error Handling: System Failure",
+    "script": "`output/scripts/test_us_21.py`",
+    "assertions": "6"
+  },
+  {
+    "us_id": "US-22",
+    "test_case": "Happy Path - Calculate reasonable fees for standard service request",
+    "script": "`output/scripts/test_us_22.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-22",
+    "test_case": "Edge Case - Calculate fees with maximum duration, complexity, and exceptional requirements",
+    "script": "`output/scripts/test_us_22.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-22",
+    "test_case": "Error Handling - Attempting to calculate fees with invalid input data",
+    "script": "`output/scripts/test_us_22.py`",
+    "assertions": "8"
+  },
+  {
+    "us_id": "US-22",
+    "test_case": "Performance Testing - Calculating fees for multiple requests in a short period",
+    "script": "`output/scripts/test_us_22.py`",
+    "assertions": "8"
+  }
+]

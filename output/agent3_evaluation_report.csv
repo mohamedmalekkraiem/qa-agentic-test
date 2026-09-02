@@ -1,0 +1,2 @@
+US_Analyzed,Total_TC,Total_AC,Avg_TC_per_US,Coverage_%,TC_Completeness_%,AC_Extraction_%,Scenario_Coverage_%,TC_Count_Score_%,Step_Quality_%,AC_Alignment_%,TC_Diversity_%,BERTScore_Alignment_%,Overall_Score,Verdict,Duration_sec
+20,69,61,3.5,100.0,100.0,100.0,100.0,100.0,88.7,93.4,92.5,83.3,93.5,✅ Agent performant et fiable,11.21

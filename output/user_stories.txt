@@ -1,0 +1,239 @@
+**US-01**
+
+- **ID**                  : US-01
+- **Title**               : Create job postings using customizable templates
+- **As a**                : HR Manager
+- **I want**              : to use customizable job posting templates
+- **So that**             : I can quickly create job listings
+- **Acceptance Criteria** :
+  - System must provide ≥ 5 templates
+  - System must have dynamic fields
+  - System must comply with F-01
+
+**US-02**
+
+- **ID**                  : US-02
+- **Title**               : Automatically post job listings to multiple channels
+- **As a**                : Hiring Manager
+- **I want**              : to automatically post job listings to multiple channels
+- **So that**             : I can save time and ensure wide reach
+- **Acceptance Criteria** :
+  - System must support 1-click posting on ≥ 4 channels
+  - System must automatically post to LinkedIn, Indeed, Welcome to the Jungle, and careers website
+  - System must comply with F-02
+
+**US-03**
+
+- **ID**                  : US-03
+- **Title**               : Generate a unique application URL for each job posting
+- **As a**                : Recruiter
+- **I want**              : to generate a unique application URL for each job posting
+- **So that**             : I can track the source of applications
+- **Acceptance Criteria** :
+  - System must generate a dedicated application URL per job posting
+  - System must track the source of applications
+  - System must comply with F-03
+
+**US-04**
+
+- **ID**                  : US-04
+- **Title**               : Moderate job postings before publication
+- **As a**                : Talent Acquisition Specialist
+- **I want**              : to moderate job postings before they are published
+- **So that**             : I can ensure job postings meet quality standards
+- **Acceptance Criteria** :
+  - System must have an HR + Manager validation workflow
+  - System must require moderation before job posting publication
+  - System must comply with F-04
+
+**US-05**
+
+- **ID**                  : US-05
+- **Title**               : Automatically parse candidate CVs
+- **As a**                : IT Manager
+- **I want**              : to automatically parse candidate CVs
+- **So that**             : I can save time and improve efficiency
+- **Acceptance Criteria** :
+  - System must recognize ≥ 90% of standard CVs
+  - System must support parsing of PDF, Word, and LinkedIn CVs
+  - System must comply with F-05
+
+**US-06**
+
+- **ID**                  : US-06
+- **Title**               : Store structured candidate CV data
+- **As a**                : GDPR Officer
+- **I want**              : to store structured candidate CV data
+- **So that**             : I can easily search and filter candidates
+- **Acceptance Criteria** :
+  - System must store candidate CV data in a structured database
+  - System must support full-text search by skills, experience, and location
+  - System must comply with F-06
+
+**US-07**
+
+- **ID**                  : US-07
+- **Title**               : Score candidates based on job description
+- **As a**                : HR Business Partner
+- **I want**              : to score candidates based on job description
+- **So that**             : I can prioritize candidates
+- **Acceptance Criteria** :
+  - System must use a transparent algorithm to score candidates
+  - System must allow customizable scoring criteria
+  - System must comply with F-07
+
+**US-08**
+
+- **ID**                  : US-08
+- **Title**               : Detect duplicate candidate applications
+- **As a**                : Talent Manager
+- **I want**              : to detect duplicate candidate applications
+- **So that**             : I can avoid processing the same candidate multiple times
+- **Acceptance Criteria** :
+  - System must alert if email or first+last name is identical
+  - System must detect applications from the same candidate for different positions
+  - System must comply with F-08
+
+**US-09**
+
+- **ID**                  : US-09
+- **Title**               : Recruitment Coordinator
+- **As a**                : Recruitment Coordinator
+- **I want**              : to ensure the configuration environment is set up correctly
+- **So that**             : to facilitate smooth user acceptance testing
+- **Acceptance Criteria** :
+  - System must log all configuration changes made by the coordinator (F-07)
+  - System must notify the coordinator when the environment is ready for UAT (F-08)
+  - System must track the status of tested flows during UAT (F-09)
+
+**US-10**
+
+- **ID**                  : US-10
+- **Title**               : Candidate
+- **As a**                : Candidate
+- **I want**              : to receive training on the new ATS system
+- **So that**             : to be able to use the system effectively
+- **Acceptance Criteria** :
+  - System must provide training sessions for candidates (F-10)
+  - System must document the training sessions attended by candidates (F-11)
+  - System must ensure candidates have access to user guides (F-12)
+
+**US-11**
+
+- **ID**                  : US-11
+- **Title**               : HR Manager
+- **As a**                : HR Manager
+- **I want**              : to ensure the project stays within budget
+- **So that**             : to manage financial resources effectively
+- **Acceptance Criteria** :
+  - System must track the estimated budget for the project (F-13)
+  - System must log all expenses against the budget (F-14)
+  - System must generate budget variance reports (F-15)
+
+**US-12**
+
+- **ID**                  : US-12
+- **Title**               : Hiring Manager
+- **As a**                : Hiring Manager
+- **I want**              : to receive signed acceptance reports
+- **So that**             : to confirm the project is completed as per requirements
+- **Acceptance Criteria** :
+  - System must generate signed acceptance reports for the project (F-16)
+  - System must notify the hiring manager when the reports are ready (F-17)
+  - System must archive the signed reports for future reference (F-18)
+
+**US-13**
+
+- **ID**                  : US-13
+- **Title**               : Customizable steps per job type
+- **As a**                : Recruiter
+- **I want**              : the ability to configure multiple steps in the recruitment process
+- **So that**             : I can tailor the hiring process to different job roles
+- **Acceptance Criteria** :
+  - ≥ 5 configurable steps (e.g., CV → Phone Screen → Tech Interview → Manager Interview → Offer)
+  - System must comply with F-10
+  - System must allow for real-time updates
+
+**US-14**
+
+- **ID**                  : US-14
+- **Title**               : Comments and evaluations per step
+- **As a**                : Talent Acquisition Specialist
+- **I want**              : to be able to leave comments and evaluations at each step of the recruitment process
+- **So that**             : I can document the candidate's progress and provide feedback
+- **Acceptance Criteria** :
+  - Complete history, non-modifiable
+  - System must comply with F-12
+  - System must ensure comments are non-editable
+
+**US-15**
+
+- **ID**                  : US-15
+- **Title**               : Customizable automatic emails
+- **As a**                : IT Manager
+- **I want**              : to be able to customize automated emails for different stages of the recruitment process
+- **So that**             : I can ensure candidates receive timely and relevant communications
+- **Acceptance Criteria** :
+  - Dynamic variables (first name, position, delay)
+  - System must comply with F-14
+  - System must allow for dynamic content insertion
+
+**US-16**
+
+- **ID**                  : US-16
+- **Title**               : Push and email notifications (configurable)
+- **As a**                : GDPR Officer
+- **I want**              : to be able to configure push and email notifications for various events in the recruitment process
+- **So that**             : I can keep all stakeholders informed in real-time
+- **Acceptance Criteria** :
+  - Per-user configuration
+  - System must comply with F-17
+  - System must allow for customizable notification settings
+
+**US-17**
+
+- **ID**                  : US-17
+- **Title**               : Interview scheduling with calendar integration
+- **As a**                : HR Business Partner
+- **I want**              : to be able to schedule interviews using integrated calendars
+- **So that**             : I can manage the scheduling process more efficiently
+- **Acceptance Criteria** :
+  - Bi-directional sync, timezone management
+  - System must comply with F-15
+  - System must allow for calendar integration
+
+**US-18**
+
+- **ID**                  : US-18
+- **Title**               : Configure job-specific recruitment steps
+- **As a**                : Talent Manager
+- **I want**              : to set up a minimum of five configurable steps for each job type
+- **So that**             : I can streamline the hiring process for different roles
+- **Acceptance Criteria** :
+  - System must allow for at least 5 steps to be configured per job type (F-10)
+  - Steps must include options for CV review, phone screen, technical interview, manager interview, and offer (F-10)
+  - Configured steps must be saved and applied consistently across all job postings (F-10)
+
+**US-19**
+
+- **ID**                  : US-19
+- **Title**               : Ensure secure handling of candidate attachments
+- **As a**                : Recruitment Coordinator
+- **I want**              : to ensure that all candidate attachments are encrypted and access-controlled
+- **So that**             : to protect sensitive information during the hiring process
+- **Acceptance Criteria** :
+  - System must use AES-256 encryption for all candidate attachments (F-09)
+  - Access to candidate attachments must be restricted to authorized personnel only (F-09)
+  - Encryption and access controls must be enforced at all times (F-09)
+
+**US-20**
+
+- **ID**                  : US-20
+- **Title**               : Implement real-time candidate movement tracking
+- **As a**                : Candidate
+- **I want**              : to be able to move candidates between recruitment steps with a drag-and-drop interface
+- **So that**             : to efficiently manage the hiring process
+- **Acceptance Criteria** :
+  - System must provide an intuitive interface for moving candidates between steps (F-11)
+  - Candidate movement must be reflected in real-time across all relevant screens (F-11)
+  - Real-time updates must be visible to all team members with access to the candidate's profile (F-11)

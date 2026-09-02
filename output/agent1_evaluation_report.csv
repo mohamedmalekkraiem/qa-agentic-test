@@ -1,0 +1,2 @@
+CDC,US_Count,Format_Compliance,Structural_Validity_%,Criteria_Quality_%,Role_Quality_%,Coverage_Score_%,BERTScore_%,Faithfulness_%,Hallucination_Rate_%,Requirement_Coverage_%,F1_Score_%,Traceability_Score_%,INVEST_Score_%,Duration_sec
+Specifications_Document_ATS_Recruitment.pdf,20,OK,100.0,100.0,100.0,83.3,70.4,100.0,0.0,90.0,86.5,100.0,90.0,55.13

@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-09-02T17:03:24.072811",
+  "total_us": 20,
+  "total_tickets": 20,
+  "metrics": {
+    "coverage": 100.0,
+    "completeness": 100.0,
+    "traceability": 100.0,
+    "epic_granularity": 100.0,
+    "epic_coherence": 88.1,
+    "priority_consistency": 60.0,
+    "duplicate_score": 100.0
+  },
+  "overall_score": 89.0,
+  "status": "✅ Agent performant et fiable",
+  "epics": [
+    "Analytics Dashboard",
+    "Notification System",
+    "Payment Integration",
+    "User Authentication",
+    "User Profile Management"
+  ],
+  "features": [
+    "Automated Email Customization",
+    "Budget Management",
+    "CV Parsing",
+    "Candidate Attachment Security",
+    "Candidate Movement Tracking",
+    "Candidate Scoring",
+    "Comments and Evaluations",
+    "Duplicate Application Detection",
+    "Interview Scheduling",
+    "Job Posting Automation",
+    "Job Posting Moderation",
+    "Job Posting Templates",
+    "Job Type Configurations",
+    "Notification Configuration",
+    "Notification System Feature",
+    "Recruitment Process Customization",
+    "Signed Acceptance Reports",
+    "Unique Application URL Generation"
+  ],
+  "priority_distribution": {
+    "high": 4,
+    "medium": 16,
+    "low": 0
+  }
+}

@@ -1,0 +1,262 @@
+[
+  {
+    "id": "US-01",
+    "title": "Create job postings using customizable templates",
+    "as_a": "HR Manager",
+    "i_want": "to use customizable job posting templates",
+    "so_that": "I can quickly create job listings",
+    "acceptance_criteria": [
+      "System must provide ≥ 5 templates",
+      "System must have dynamic fields",
+      "System must comply with F-01"
+    ],
+    "requirement_id": "F-01"
+  },
+  {
+    "id": "US-02",
+    "title": "Automatically post job listings to multiple channels",
+    "as_a": "Hiring Manager",
+    "i_want": "to automatically post job listings to multiple channels",
+    "so_that": "I can save time and ensure wide reach",
+    "acceptance_criteria": [
+      "System must support 1-click posting on ≥ 4 channels",
+      "System must automatically post to LinkedIn, Indeed, Welcome to the Jungle, and careers website",
+      "System must comply with F-02"
+    ],
+    "requirement_id": "F-02"
+  },
+  {
+    "id": "US-03",
+    "title": "Generate a unique application URL for each job posting",
+    "as_a": "Recruiter",
+    "i_want": "to generate a unique application URL for each job posting",
+    "so_that": "I can track the source of applications",
+    "acceptance_criteria": [
+      "System must generate a dedicated application URL per job posting",
+      "System must track the source of applications",
+      "System must comply with F-03"
+    ],
+    "requirement_id": "F-03"
+  },
+  {
+    "id": "US-04",
+    "title": "Moderate job postings before publication",
+    "as_a": "Talent Acquisition Specialist",
+    "i_want": "to moderate job postings before they are published",
+    "so_that": "I can ensure job postings meet quality standards",
+    "acceptance_criteria": [
+      "System must have an HR + Manager validation workflow",
+      "System must require moderation before job posting publication",
+      "System must comply with F-04"
+    ],
+    "requirement_id": "F-04"
+  },
+  {
+    "id": "US-05",
+    "title": "Automatically parse candidate CVs",
+    "as_a": "IT Manager",
+    "i_want": "to automatically parse candidate CVs",
+    "so_that": "I can save time and improve efficiency",
+    "acceptance_criteria": [
+      "System must recognize ≥ 90% of standard CVs",
+      "System must support parsing of PDF, Word, and LinkedIn CVs",
+      "System must comply with F-05"
+    ],
+    "requirement_id": "F-05"
+  },
+  {
+    "id": "US-06",
+    "title": "Store structured candidate CV data",
+    "as_a": "GDPR Officer",
+    "i_want": "to store structured candidate CV data",
+    "so_that": "I can easily search and filter candidates",
+    "acceptance_criteria": [
+      "System must store candidate CV data in a structured database",
+      "System must support full-text search by skills, experience, and location",
+      "System must comply with F-06"
+    ],
+    "requirement_id": "F-06"
+  },
+  {
+    "id": "US-07",
+    "title": "Score candidates based on job description",
+    "as_a": "HR Business Partner",
+    "i_want": "to score candidates based on job description",
+    "so_that": "I can prioritize candidates",
+    "acceptance_criteria": [
+      "System must use a transparent algorithm to score candidates",
+      "System must allow customizable scoring criteria",
+      "System must comply with F-07"
+    ],
+    "requirement_id": "F-07"
+  },
+  {
+    "id": "US-08",
+    "title": "Detect duplicate candidate applications",
+    "as_a": "Talent Manager",
+    "i_want": "to detect duplicate candidate applications",
+    "so_that": "I can avoid processing the same candidate multiple times",
+    "acceptance_criteria": [
+      "System must alert if email or first+last name is identical",
+      "System must detect applications from the same candidate for different positions",
+      "System must comply with F-08"
+    ],
+    "requirement_id": "F-08"
+  },
+  {
+    "id": "US-09",
+    "title": "Recruitment Coordinator",
+    "as_a": "Recruitment Coordinator",
+    "i_want": "to ensure the configuration environment is set up correctly",
+    "so_that": "to facilitate smooth user acceptance testing",
+    "acceptance_criteria": [
+      "System must log all configuration changes made by the coordinator (F-07)",
+      "System must notify the coordinator when the environment is ready for UAT (F-08)",
+      "System must track the status of tested flows during UAT (F-09)"
+    ],
+    "requirement_id": "F-09"
+  },
+  {
+    "id": "US-10",
+    "title": "Candidate",
+    "as_a": "Candidate",
+    "i_want": "to receive training on the new ATS system",
+    "so_that": "to be able to use the system effectively",
+    "acceptance_criteria": [
+      "System must provide training sessions for candidates (F-10)",
+      "System must document the training sessions attended by candidates (F-11)",
+      "System must ensure candidates have access to user guides (F-12)"
+    ],
+    "requirement_id": "F-10"
+  },
+  {
+    "id": "US-11",
+    "title": "HR Manager",
+    "as_a": "HR Manager",
+    "i_want": "to ensure the project stays within budget",
+    "so_that": "to manage financial resources effectively",
+    "acceptance_criteria": [
+      "System must track the estimated budget for the project (F-13)",
+      "System must log all expenses against the budget (F-14)",
+      "System must generate budget variance reports (F-15)"
+    ],
+    "requirement_id": "F-13"
+  },
+  {
+    "id": "US-12",
+    "title": "Hiring Manager",
+    "as_a": "Hiring Manager",
+    "i_want": "to receive signed acceptance reports",
+    "so_that": "to confirm the project is completed as per requirements",
+    "acceptance_criteria": [
+      "System must generate signed acceptance reports for the project (F-16)",
+      "System must notify the hiring manager when the reports are ready (F-17)",
+      "System must archive the signed reports for future reference (F-18)"
+    ],
+    "requirement_id": "F-16"
+  },
+  {
+    "id": "US-13",
+    "title": "Customizable steps per job type",
+    "as_a": "Recruiter",
+    "i_want": "the ability to configure multiple steps in the recruitment process",
+    "so_that": "I can tailor the hiring process to different job roles",
+    "acceptance_criteria": [
+      "≥ 5 configurable steps (e.g., CV → Phone Screen → Tech Interview → Manager Interview → Offer)",
+      "System must comply with F-10",
+      "System must allow for real-time updates"
+    ],
+    "requirement_id": "F-11"
+  },
+  {
+    "id": "US-14",
+    "title": "Comments and evaluations per step",
+    "as_a": "Talent Acquisition Specialist",
+    "i_want": "to be able to leave comments and evaluations at each step of the recruitment process",
+    "so_that": "I can document the candidate's progress and provide feedback",
+    "acceptance_criteria": [
+      "Complete history, non-modifiable",
+      "System must comply with F-12",
+      "System must ensure comments are non-editable"
+    ],
+    "requirement_id": "F-12"
+  },
+  {
+    "id": "US-15",
+    "title": "Customizable automatic emails",
+    "as_a": "IT Manager",
+    "i_want": "to be able to customize automated emails for different stages of the recruitment process",
+    "so_that": "I can ensure candidates receive timely and relevant communications",
+    "acceptance_criteria": [
+      "Dynamic variables (first name, position, delay)",
+      "System must comply with F-14",
+      "System must allow for dynamic content insertion"
+    ],
+    "requirement_id": "F-14"
+  },
+  {
+    "id": "US-16",
+    "title": "Push and email notifications (configurable)",
+    "as_a": "GDPR Officer",
+    "i_want": "to be able to configure push and email notifications for various events in the recruitment process",
+    "so_that": "I can keep all stakeholders informed in real-time",
+    "acceptance_criteria": [
+      "Per-user configuration",
+      "System must comply with F-17",
+      "System must allow for customizable notification settings"
+    ],
+    "requirement_id": "F-15"
+  },
+  {
+    "id": "US-17",
+    "title": "Interview scheduling with calendar integration",
+    "as_a": "HR Business Partner",
+    "i_want": "to be able to schedule interviews using integrated calendars",
+    "so_that": "I can manage the scheduling process more efficiently",
+    "acceptance_criteria": [
+      "Bi-directional sync, timezone management",
+      "System must comply with F-15",
+      "System must allow for calendar integration"
+    ],
+    "requirement_id": "F-17"
+  },
+  {
+    "id": "US-18",
+    "title": "Configure job-specific recruitment steps",
+    "as_a": "Talent Manager",
+    "i_want": "to set up a minimum of five configurable steps for each job type",
+    "so_that": "I can streamline the hiring process for different roles",
+    "acceptance_criteria": [
+      "System must allow for at least 5 steps to be configured per job type (F-10)",
+      "Steps must include options for CV review, phone screen, technical interview, manager interview, and offer (F-10)",
+      "Configured steps must be saved and applied consistently across all job postings (F-10)"
+    ],
+    "requirement_id": "F-18"
+  },
+  {
+    "id": "US-19",
+    "title": "Ensure secure handling of candidate attachments",
+    "as_a": "Recruitment Coordinator",
+    "i_want": "to ensure that all candidate attachments are encrypted and access-controlled",
+    "so_that": "to protect sensitive information during the hiring process",
+    "acceptance_criteria": [
+      "System must use AES-256 encryption for all candidate attachments (F-09)",
+      "Access to candidate attachments must be restricted to authorized personnel only (F-09)",
+      "Encryption and access controls must be enforced at all times (F-09)"
+    ],
+    "requirement_id": "F-19"
+  },
+  {
+    "id": "US-20",
+    "title": "Implement real-time candidate movement tracking",
+    "as_a": "Candidate",
+    "i_want": "to be able to move candidates between recruitment steps with a drag-and-drop interface",
+    "so_that": "to efficiently manage the hiring process",
+    "acceptance_criteria": [
+      "System must provide an intuitive interface for moving candidates between steps (F-11)",
+      "Candidate movement must be reflected in real-time across all relevant screens (F-11)",
+      "Real-time updates must be visible to all team members with access to the candidate's profile (F-11)"
+    ],
+    "requirement_id": "F-20"
+  }
+]

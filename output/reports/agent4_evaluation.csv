@@ -1,0 +1,2 @@
+Scripts_Generated,Total_Test_Functions,Script_Coverage_%,Syntax_Validity_%,Traceability_%,Playwright_API_Usage_%,Assertion_Density_avg,Assertion_Density_score_%,Test_Independence_%,BERTScore_%,Overall_Score,Verdict,Duration_sec
+20,69,100.0,100.0,100.0,100.0,2.0,100.0,100.0,72.0,95.5,✅ Agent performant et fiable,12.56
